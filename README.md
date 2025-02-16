@@ -100,7 +100,7 @@ git clone https://github.com/ElkarkouriMohamed/social-app.git
 * Users can send real-time messages to their friends
 
 ## Website
-You can access the live version of the application here: [Social App Live Demo](social-app.free.nf)
+You can access the live version of the application here: [Social App Live Demo](http://social-app.free.nf/)
 
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and create a pull request with your changes. Ensure that your code follows the existing conventions and is properly tested.
