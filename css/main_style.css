@@ -1,0 +1,428 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main_color: #98abee;
+}
+
+.navbar {
+  background-color: var(--main_color);
+}
+
+.dropdown-menu {
+  animation: menu 0.7s ease;
+}
+
+@keyframes menu {
+  0% {
+    transform: translate(0, -4rem) scale(0.3);
+  }
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.posts {
+  width: 450px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 475px) {
+  .posts {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+.user-post {
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+.post-det img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-body img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.user-post .tools i {
+  font-size: 25px;
+}
+
+::-webkit-scrollbar,
+::-moz-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-moz-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb,
+::-moz-scrollbar-thumb {
+  border-radius: 5px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+  background-color: #eee;
+}
+
+.container {
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.container .publish {
+  width: 40%;
+}
+
+@media only screen and (max-width: 767px) {
+  .container .publish {
+    width: 80%;
+  }
+  .posts {
+    height: initial;
+    overflow-y: initial;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .container .publish {
+    width: 100%;
+    padding-inline: 10px;
+  }
+}
+
+.publish-post {
+  background-color: var(--main_color);
+  color: white;
+}
+
+textarea {
+  min-height: 150px !important;
+}
+
+.profile .btn {
+  border: none;
+}
+
+.profile .btn::after {
+  color: white;
+}
+
+.profile ul {
+  padding: 0;
+  overflow: hidden;
+}
+
+.profile li a:hover {
+  background-color: #d2e0fb !important;
+  color: white;
+}
+
+.comments {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55vw;
+  height: 85%;
+  background-color: #a9a9a9;
+  border-radius: 30px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  z-index: 101;
+  display: none;
+  animation: show 0.9s ease;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0.5);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .comments {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 596px) {
+  .comments {
+    width: 95%;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.top {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.close {
+  background-color: gray;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.close i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.body {
+  height: 80%;
+  overflow-y: auto;
+}
+
+.msg-box {
+  display: grid;
+  grid-template-columns: 45px auto 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.msg-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.msg-box .msg {
+  padding: 10px 15px;
+  background-color: gray;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.msg-box .msg p:first-child {
+  color: #c2c2c2;
+  font-weight: 400;
+}
+
+.addComments,
+.addMessages {
+  height: 10%;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: space-between;
+  background: gray;
+  border-radius: 20px;
+  align-items: center;
+}
+.addComments > div,
+.addMessages > div {
+  width: 90%;
+  height: 100%;
+}
+
+.addComments input,
+.addMessages input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #8f8e8e;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.addComments span,
+.addMessages span {
+  height: 100%;
+  width: 6%;
+  display: flex;
+  align-items: center;
+}
+
+.addComments span i,
+.addMessages span i {
+  font-size: 30px;
+  width: 100%;
+  color: #afafaf;
+  cursor: pointer;
+}
+
+.friend_request i,
+.messages i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 605px) {
+  input[type="search"] {
+    margin-top: 30px;
+  }
+}
+
+.users-search {
+  width: 250px;
+  max-height: 50vh;
+  background-color: #a9a9a9;
+  background-color: #a9a9a9;
+  position: absolute;
+  top: 79px;
+  right: 10px;
+  padding: 10px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 605px) {
+  .users-search {
+    right: initial;
+    top: 145px;
+    left: 10px;
+  }
+}
+
+body > div {
+  transition: opacity 0.2s ease;
+}
+
+.add-opacity {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 90;
+}
+
+.friend-requests {
+  width: 250px;
+  max-height: 60vh;
+  position: absolute;
+  top: 80px;
+  left: 282px;
+  padding: 8px;
+  background-color: #b1b1b1;
+  border-radius: 5px;
+  overflow-y: auto;
+  z-index: 100;
+  animation: menu 0.7s ease;
+}
+
+.request {
+  padding: 7px;
+  background-color: #c7c8cc;
+  border-radius: 10px;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .friend-requests {
+    left: 67px;
+  }
+}
+
+.messages-box {
+  background: #eee;
+  border-radius: 15px;
+  width: 80%;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+  overflow: hidden;
+  animation: show 0.7s ease;
+}
+
+.messages-box .contacts {
+  width: 28%;
+  height: 100%;
+  background-color: #535455;
+  color: white;
+  gap: 10px;
+}
+
+.messages-box .profile-img img {
+  cursor: pointer;
+}
+
+.messages-box .body {
+  width: 72%;
+  height: 100%;
+  background-color: #949494;
+  padding: 5px;
+}
+
+.messages-box .body .message-body {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5px;
+  overflow-y: auto;
+}
+
+.messages-box .message-body .msg {
+  width: fit-content;
+  padding: 3px 10px;
+  font-weight: 600;
+  max-width: 90%;
+}
+
+.my-msg {
+  background: dodgerblue;
+  border-radius: 10px 0px 10px 10px;
+  align-self: end;
+  color: white;
+}
+
+.other-msg {
+  background: whitesmoke;
+  border-radius: 0px 10px 10px 10px;
+  color: initial;
+}
+
+.messages-box .message-body .msg span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.active {
+  background-color: cornflowerblue;
+  border-radius: 7px;
+}

@@ -1,0 +1,157 @@
+* {
+  font-family: "Roboto";
+  font-style: normal;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: rgb(202, 148, 49);
+}
+body {
+  background-image: url("/93904.jpg");
+  background-size: cover;
+}
+.parent {
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 0 12px 0px black;
+  border-radius: 10px 10px;
+  display: flex;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  /* filter: blur(8px); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 810px) {
+  .parent {
+    margin-top: 30px;
+    flex-direction: column;
+    width: 100%;
+    height: initial;
+    position: static;
+    transform: translate(0%, 0%);
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.loginput {
+  box-sizing: border-box;
+  width: 50%;
+  height: 500px;
+  padding: 15px 20px;
+  margin-top: 71px;
+}
+@media only screen and (max-width: 810px) {
+  .loginput {
+    width: 100%;
+    height: initial;
+    margin-top: 20px;
+  }
+}
+.loginput p {
+  color: var(--mainColor);
+  font-size: 28px;
+  font-weight: 900;
+}
+.email_input {
+  margin-top: 80px;
+}
+@media only screen and (max-width: 810px) {
+  .email_input {
+    margin-top: 30px;
+  }
+}
+.password_input {
+  margin-top: 30px;
+}
+
+#email,
+#password {
+  box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  border-radius: 12px;
+  border: 2px solid var(--mainColor);
+  outline: none;
+  padding: 10px;
+}
+.loginbutton {
+  margin-top: 40px;
+}
+.loginbutton input {
+  width: 140px;
+  height: 40px;
+  background-image: linear-gradient(
+    to left,
+    rgb(212, 163, 71),
+    rgb(197, 88, 88)
+  );
+  border: 0;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.p {
+  margin-top: 30px;
+}
+.p a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(3, 44, 3, 0.705);
+}
+.signup {
+  box-sizing: border-box;
+  width: 50%;
+  height: 500px;
+  padding: 135px 20px;
+  background-image: linear-gradient(
+    to left,
+    rgb(212, 163, 71),
+    rgb(197, 88, 88)
+  );
+  border-radius: 35% 10px 10px;
+  border-bottom-left-radius: 35%;
+}
+@media only screen and (max-width: 810px) {
+  .signup {
+    width: 100%;
+    height: initial;
+    padding: 69px;
+  }
+  .loginput {
+    margin-bottom: 30px;
+  }
+}
+h2 {
+  color: white;
+}
+.signup p {
+  margin-top: 29px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.link {
+  margin-top: 40px;
+}
+.link a {
+  box-sizing: content-box;
+  padding: 8px 40px;
+  text-decoration: none;
+  background-color: white;
+  border: 0;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+::placeholder {
+  font-size: 18px;
+  color: rgba(3, 44, 3, 0.705);
+}
